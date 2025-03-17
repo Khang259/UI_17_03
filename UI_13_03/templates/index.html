@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Received Data</title>
+    <script>
+        async function fetchData() {
+            const response = await fetch("/get-data");
+            const data = await response.json();
+            const table = document.getElementById("data-table");
+            table.innerHTML = "<tr><th>Device ID</th><th>Timestamp</th><th>Sensor Value</th></tr>";
+            data.forEach(item => {
+                table.innerHTML += `<tr><td>${item.device_id}</td><td>${item.timestamp}</td><td>${item.sensor_value}</td></tr>`;
+            });
+        }
+        window.onload = fetchData;
+    </script>
+</head>
+<body>
+    <h1>Received Data</h1>
+    <table border="1" id="data-table">
+        <tr><th>Device ID</th><th>Timestamp</th><th>Sensor Value</th></tr>
+    </table>
+</body>
+</html>

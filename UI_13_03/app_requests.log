@@ -1,0 +1,2 @@
+2025-02-28 14:49:57,787 - INFO - Received data: device_id='A100' timestamp='100000000' sensor_value=45.6
+2025-02-28 14:52:27,379 - INFO - Received data: device_id='A100' timestamp='100000000' sensor_value=100.0

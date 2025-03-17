@@ -1,0 +1,239 @@
+/* Ensure the body and container take full width */
+body, html {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.header {
+    width: 100%;
+    text-align: center;
+}
+
+/* Ensure the container takes full width */
+.container {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 0 var(--card-height);
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Ensure row stretches full width */
+.row {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: stretch;
+    flex: 1;
+    padding-left: 30px;
+}
+
+.col-md-3 {
+    flex: 1 1 20%;
+    height: 100%;
+    padding-top: 50px;
+}
+
+/* Cards take full height */
+.card {
+    width: 100%;
+    max-width: 100%;
+    height: 650px;
+    display: flex;
+    justify-content: center;
+    /* text-align: center; */
+    border-radius: 1rem;
+    box-shadow: 0 0.625rem 0.9375rem #0000004d;
+    background-color: #FABF37;
+}
+
+.card.error{
+    background-color: red;
+}
+
+.card.post{
+    background-color: #44b60f;
+    transform: translate(0%, -7%);    
+}
+
+.overlay1{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 10%;
+    width: 100%;
+    box-shadow: 0 8px 8px #00000080;
+    border-radius: 0px 0px 15px 15px;
+}
+
+.h3{
+    position: absolute;
+    left: 50%;
+    /* transform: translate(-50%, -50%); */
+    height: 20%;
+    width: 90%;
+    background-color: #ffffff33;
+    display: flex;
+    font-weight: bold;
+    color: #000000;
+}
+
+
+.row3 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 300px; */
+    text-align: center;
+    background-color: #f4f4f4; /* Màu nền nhẹ nhàng */
+    box-shadow: 0 8px 16px #00000180;
+    border-radius: 15px 15px 15px 15px;
+    color: #fff; /* White text for contrast */
+    padding: 20px; /* Add padding for spacing */
+}
+
+.text_1{
+    font-family: 'Poppins', sans-serif; /* Modern font choice */
+    /* font-size: 32px;  */
+    font-weight: bold;
+    /* letter-spacing: 2px;  */
+    color: #000000;
+    margin-top: 10px;
+}
+
+.row2{
+    text-align: center;
+    background-color: #f4f4f4; /* Màu nền nhẹ nhàng */
+    border-radius: 10px;
+    margin-top: 30px; 
+    width: 100%;
+    min-height: 380px; /* Tăng chiều cao tối thiểu */
+    height: auto; /* Đảm bảo hộp có thể mở rộng nếu nội dung lớn hơn */
+    box-shadow: 0 6px 8px #0000001a; /* Subtle shadow for depth */
+    border-radius: 12px; 
+    display: flex;
+    flex-direction: column; /* Xếp nội dung theo chiều dọc */
+    justify-content: flex-start; /* Giữ nội dung ở trên */
+    align-items: center; /* Căn giữa theo chiều ngang */
+    padding: 0px; /* Thêm padding để tránh nội dung chạm viền */
+}
+
+/* Bảng */
+.history-table {
+    width: 100%; /* Đảm bảo bảng nằm gọn trong hộp */
+    font-family: Arial, sans-serif;
+}
+
+/* .row.history-table tr{
+    border-bottom: 3px solid #000000;
+}
+
+.row.history-table tr:last-child{
+    border-bottom: none;
+} */
+
+.history-table td{
+    padding-top: 5px;
+}
+
+.card-title {
+    margin-top: 10px;
+    font-family:'Segoe UI';
+    text-align: center;
+    font-weight: bold;
+    font-size: 2.5rem;
+    color: #030303;
+} */
+
+.card-text {
+    padding-top: 10%;
+    font-size: 1.5rem;
+    text-shadow: 0.25rem 0.25rem 0.1875rem #00000080;
+} 
+
+.img-card-container {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 50%;
+    max-width: 7.5rem;
+    min-width: 3.75rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 1/1;
+}
+
+.navbar {
+    min-height: 80px; /* Đảm bảo navbar không bị quá nhỏ */
+    height: 80px;
+    max-height: 300px;
+    /* box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3); */
+    flex-wrap: nowrap;
+    align-items: center;
+    background: linear-gradient(135deg, #FFD700, #f8b05e);
+    backdrop-filter: blur(10px);
+}
+
+.navbar-title {
+    height: auto;
+    top: 5px;
+    font-family: "CCHookyOpen";
+    text-transform: uppercase;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 50px; /* Thay đổi tùy ý */
+    color: #333;
+    text-decoration: none !important;
+}
+
+.navbar-images {
+    position: relative;
+    display: flex;
+    max-height: 130px;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    /* gap: 1%; */
+    z-index: 10;
+    overflow: visible;
+}
+
+.navbar-logo {
+    width: auto;
+    height: 90%;
+}
+
+
+.navbar-logo:last-child {
+    margin-top: 1%;
+    height: 60%;
+}
+
+
+.navbar-pika:hover {
+    transform: scale(1.1);
+    z-index: 20;
+}
+
+.navbar-pika {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    bottom: 0;
+    /* aspect-ratio: 1/1; */
+}
+
+@font-face {
+    font-family: "CCHookyOpen";
+    src: url("fonts/CCHookyOpen W00 Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
